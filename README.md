@@ -1,6 +1,6 @@
 # Python Snippets
 
-Various bits of useful code ..
+`Various bits of useful code` ..
 
 # Matplotlib Grouped Boxplots
 
@@ -23,3 +23,13 @@ https://groups.google.com/forum/#!topic/comp.lang.python/HYChxtsrhnw
 
 More Python import pitfalls and recipes at: 
 http://python-notes.curiousefficiency.org/en/latest/python_concepts/import_traps.html
+
+# Unit Testing with `unittest` and `mock`:
+    
+Mock exists to remove the need to create stub classes to replace functionality in your unit tests. It captures method calls and enables assertions about those calls, enabling sub-system and unit testing to remain separated. 
+
+More on Mock: https://mock.readthedocs.io/en/latest/
+More on Py unit testing: https://docs.python.org/dev/library/unittest.mock.html
+
+Install mock with: `pip install mock`
+Run as: `python mock_unit_test.py`
