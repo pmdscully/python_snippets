@@ -34,3 +34,15 @@ More on Py unit testing: https://docs.python.org/dev/library/unittest.mock.html
 
 Install mock with: `pip install mock`
 Run as: `python mock_unit_test.py`
+
+
+# SciPy optimization wrapper
+
+A wrapper to simplify use cases of global search with scipy.optimize, where inputs are a list of values and a function. Fixed input sequence element value `bounds` for lower/upper are set at `1.0` and `2.0` and the global search type is `scipy.optimize.basinhopping`.
+
+Usage: 
+- Extend the `Evaluator()` base class, and replace the `evaluate(x)` function.
+- Extend the `Search()` base class wrapper to update the search method.
+
+
+
