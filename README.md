@@ -45,7 +45,7 @@ Usage:
 - Extend the `Search()` base class wrapper to update the search method.
 
 
-# Python Formal Method Validators via Added Decorators(Apr 2017)
+# Python Formal Method Validators via Added Decorators (Apr 2017)
 
 A module of function (arg/return type) validation decorators written by Jackson Cooper at [pythoncentral.io](http://pythoncentral.io/validate-python-function-parameters-and-return-types-with-decorators/) that is so useful it should be a built-in.
 
@@ -63,4 +63,12 @@ Code Example:
 - See `test_function_validators.py`
 
 
+# Python Inheritance and Method Resolution Order (Apr 2017)
+
+Python supports multiple inheritance and determining the parent class override behaviour is handled by the method resolution order (MRO) and the C3-MRO algorithms for old (`< Py2.2`) and new (`>= Py2.2`) style classes.
+
+In this set of python modules, for new style classes:
+- constructor overriding behaviour and syntax for single inheritance is worked through under the various cases.
+- constructor overriding behaviour and syntax for multiple inheritance is shown in one case.
+- diamond inheritance behaviour is shown for new and old style classes, in order to highlight the change between MRO and C3-MRO.
 
