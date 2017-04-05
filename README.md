@@ -49,6 +49,8 @@ Usage:
 
 A module of function (arg/return type) validation decorators written by Jackson Cooper at [pythoncentral.io](http://pythoncentral.io/validate-python-function-parameters-and-return-types-with-decorators/) that is so useful it should be a built-in.
 
+This should be considered beta, see comment section of [pythoncentral.io](http://pythoncentral.io/validate-python-function-parameters-and-return-types-with-decorators/) for details.
+
 Module provides function argument type and return type validators for @accept(a,b,c) and @returns(x,y,z) function decorators.
 
 This simplifies the formalisation all function validation and is particularly useful for API interfaces definition.
