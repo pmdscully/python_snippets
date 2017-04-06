@@ -65,7 +65,7 @@ Code Example:
 
 Python supports multiple inheritance and determining the parent class override behaviour is handled by the method resolution order (MRO) and the C3-MRO algorithms for old (`< Py2.2`) and new (`>= Py2.2`) style classes. 
 
-As an aside, MRO is depth-first and C3-MRO is breadth-first resolution. Both will resolve to the first match. Which differs interestingly from C++, which uses a set-based lookup and merge algorithm and can conclude with an "ambiguous parent constructor" compile-time error.
+As an aside, MRO is depth-first and C3-MRO is breadth-first resolution. Both will resolve to the first match. Which differs interestingly from C++, which uses a set-based lookup and merge algorithm and can conclude with an *ambiguous parent constructor* compile-time error.
 
 In this set of python modules, for new style classes:
 - constructor overriding behaviour and syntax for single inheritance is worked through under the various cases.
