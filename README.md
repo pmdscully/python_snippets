@@ -45,15 +45,13 @@ Usage:
 - Extend the `Search()` base class wrapper to update the search method.
 
 
-# Python Formal Method Validators via Added Decorators (Apr 2017)
+# Give Python Statically Typed Functions, via Decorator Validators (Apr 2017)
 
-A module of function (arg/return type) validation decorators written by Jackson Cooper at [pythoncentral.io](http://pythoncentral.io/validate-python-function-parameters-and-return-types-with-decorators/) that is so useful it should be a built-in.
+A module of function (arg/return type) validation decorators written by Jackson Cooper at [pythoncentral.io](http://pythoncentral.io/validate-python-function-parameters-and-return-types-with-decorators/). There are cases where you just want type integrity checking on return and input argument parameters; this is a easy way to acheive that. This simplifies the formalisation of function validation and is particularly suitable for API interface definition where type correctness is vital.
 
-This should be considered beta, see comment section of [pythoncentral.io](http://pythoncentral.io/validate-python-function-parameters-and-return-types-with-decorators/) for details.
+This should be considered *beta*, see comment section of [pythoncentral.io](http://pythoncentral.io/validate-python-function-parameters-and-return-types-with-decorators/) for details.
 
-Module provides function argument type and return type validators for @accept(a,b,c) and @returns(x,y,z) function decorators.
-
-This simplifies the formalisation all function validation and is particularly useful for API interfaces definition.
+Module provides function argument type and return type validators for `@accept(a,b,c)` and `@returns(x,y,z)` function decorators.
 
 Usage:
 - `from function_validators import *`
