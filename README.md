@@ -9,9 +9,7 @@ Box and Whisker Plots or boxplots, are a hugely useful data visualisation tool t
 Further details here: https://pmdscully.wordpress.com/2016/06/30/boxplots-data-visualisation/
 
 # Recipe: Circular Nested Imports in Non-OOP Python Programs (Apr 2017)
-Circular imports are not handled cleanly in Python 2.7x. The best solution is to avoid them. In this example, a structural problem-case is shown and the solution-case is presented by moving the shared code outside of the two code imports.
-
-In object oriented programming (OOP) cases, there are a number of dependency patterns against which to match in order to find a solution. A reference to these can be found here: http://www.oodesign.com/
+Circular imports are not handled cleanly in Python 2.7x. The best solution is to avoid them. In this example, a structural problem-case is shown and the solution-case is presented by moving the shared code outside of the two code imports. Comments on alternatives welcome..
 
 ### Understanding Python 2.7's import management: 
 The `sys.modules` dict variable is used by Python to store imported module objects (i.e. read and parsed from .py files) and the current execution state of the imported module. The module name is the dict's `key` lookup and `value` is its corresponding `module object`. 
