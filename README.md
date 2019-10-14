@@ -9,9 +9,7 @@ Box and Whisker Plots or boxplots, are a hugely useful data visualisation tool t
 Further details here: https://pmdscully.wordpress.com/2016/06/30/boxplots-data-visualisation/
 
 # Recipe: Circular Nested Imports in Non-OOP Python Programs (Apr 2017)
-Circular imports are not handled cleanly in Python 2.7x. The best solution is to avoid them. In this example, a structural problem-case is shown and the solution-case is presented by moving the shared code outside of the two code imports.
-
-In object oriented programming (OOP) cases, there are a number of dependency patterns against which to match in order to find a solution. A reference to these can be found here: http://www.oodesign.com/
+Circular imports are not handled cleanly in Python 2.7x. The best solution is to avoid them. In this example, a structural problem-case is shown and the solution-case is presented by moving the shared code outside of the two code imports. Comments on alternatives welcome..
 
 ### Understanding Python 2.7's import management: 
 The `sys.modules` dict variable is used by Python to store imported module objects (i.e. read and parsed from .py files) and the current execution state of the imported module. The module name is the dict's `key` lookup and `value` is its corresponding `module object`. 
@@ -45,15 +43,13 @@ Usage:
 - Extend the `Search()` base class wrapper to update the search method.
 
 
-# Python Formal Method Validators via Added Decorators (Apr 2017)
+# Give Python Statically Typed Functions, via Decorator Validators (Apr 2017)
 
-A module of function (arg/return type) validation decorators written by Jackson Cooper at [pythoncentral.io](http://pythoncentral.io/validate-python-function-parameters-and-return-types-with-decorators/) that is so useful it should be a built-in.
+A module of function (arg/return type) validation decorators written by Jackson Cooper at [pythoncentral.io](http://pythoncentral.io/validate-python-function-parameters-and-return-types-with-decorators/). There are cases where you just want type integrity checking on return and input argument parameters; this is a easy way to acheive that. This simplifies the formalisation of function validation and is particularly suitable for API interface definition where type correctness is vital.
 
-This should be considered beta, see comment section of [pythoncentral.io](http://pythoncentral.io/validate-python-function-parameters-and-return-types-with-decorators/) for details.
+This should be considered *beta*, see comment section of [pythoncentral.io](http://pythoncentral.io/validate-python-function-parameters-and-return-types-with-decorators/) for details.
 
-Module provides function argument type and return type validators for @accept(a,b,c) and @returns(x,y,z) function decorators.
-
-This simplifies the formalisation all function validation and is particularly useful for API interfaces definition.
+Module provides function argument type and return type validators for `@accept(a,b,c)` and `@returns(x,y,z)` function decorators.
 
 Usage:
 - `from function_validators import *`
@@ -65,7 +61,9 @@ Code Example:
 
 # Python Inheritance and Method Resolution Order (Apr 2017)
 
-Python supports multiple inheritance and determining the parent class override behaviour is handled by the method resolution order (MRO) and the C3-MRO algorithms for old (`< Py2.2`) and new (`>= Py2.2`) style classes.
+Python supports multiple inheritance and determining the parent class override behaviour is handled by the method resolution order (MRO) and the C3-MRO algorithms for old (`< Py2.2`) and new (`>= Py2.2`) style classes. 
+
+As an aside, MRO is depth-first and C3-MRO is breadth-first resolution. Both will resolve to the first match. Which differs interestingly from C++, which uses a set-based lookup and merge algorithm and can conclude with an *ambiguous parent constructor* compile-time error.
 
 In this set of python modules, for new style classes:
 - constructor overriding behaviour and syntax for single inheritance is worked through under the various cases.
