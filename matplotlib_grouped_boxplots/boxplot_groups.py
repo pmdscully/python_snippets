@@ -12,7 +12,7 @@ data_group1 = [data1, data2]
 data_group2 = [data3, data4]
 
 # --- Labels for your data:
-labels_list = ['a','b','c','d']
+labels_list = ['a','b']
 xlocations	= range(len(data_group1))
 width		= 0.3
 symbol		= 'r+'
@@ -22,18 +22,21 @@ ymax 		= 10
 ax = plt.gca()
 ax.set_ylim(ymin,ymax)
 ax.set_xticklabels( labels_list, rotation=0 )
-ax.grid(True)
+ax.grid(True, linestyle='dotted')
 ax.set_axisbelow(True)
 ax.set_xticks(xlocations)
 plt.xlabel('X axis label')
 plt.ylabel('Y axis label')
+plt.title('title')
 
 # --- Offset the positions per group:
 positions_group1 = [x-(width+0.01) for x in xlocations]
 positions_group2 = xlocations
 
+ax.grid(False)
 plt.boxplot(data_group1, 
 			sym=symbol,
+			labels=['',''],
 			positions=positions_group1, 
 			widths=width, 
 #			notch=False,  
@@ -44,8 +47,9 @@ plt.boxplot(data_group1,
 #			conf_intervals=None,
 #			patch_artist=False,
 			)
-
+ax.grid(True, linestyle='dotted')
 plt.boxplot(data_group2, 
+            labels=['a','b'],
 			sym=symbol,
 			positions=positions_group2, 
 			widths=width, 
@@ -60,4 +64,4 @@ plt.boxplot(data_group2,
 
 plt.savefig('boxplot_grouped.png')	
 plt.savefig('boxplot_grouped.pdf')    # when publishing, use high quality PDFs
-plt.show()                   # uncomment to show the plot.	
+#plt.show()                   # uncomment to show the plot.	
