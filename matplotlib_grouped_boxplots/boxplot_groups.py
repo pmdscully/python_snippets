@@ -33,7 +33,7 @@ plt.title('title')
 positions_group1 = [x-(width+0.01) for x in xlocations]
 positions_group2 = xlocations
 
-ax.grid(False)
+
 plt.boxplot(data_group1, 
 			sym=symbol,
 			labels=['',''],
@@ -47,7 +47,7 @@ plt.boxplot(data_group1,
 #			conf_intervals=None,
 #			patch_artist=False,
 			)
-ax.grid(True, linestyle='dotted')
+
 plt.boxplot(data_group2, 
             labels=['a','b'],
 			sym=symbol,
