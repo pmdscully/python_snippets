@@ -22,7 +22,11 @@ class MongoDBConnectionManager():
 		self.connection.close() 
 
 # connecting with a localhost 
-with MongoDBConnectionManager('localhost', '27017') as mongo: 
-	collection = mongo.connection.SampleDb.test 
-	data = collection.find({'_id': 1}) 
-	print(data.get('name')) 
+with MongoDBConnectionManager('localhost', 27017) as mongo: 
+	collection = mongo.connection.SampleDb.test
+	res = collection.delete_many({'item': "card", 'qty': 15})
+	print(f'{res.deleted_count} deleted')
+	data = collection.find({'item': "card", 'qty': 15}) 
+	collection.insert_one({ 'item': "card", 'qty': 15 })
+	for d in data:
+		print(d) 
